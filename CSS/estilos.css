@@ -1,9 +1,20 @@
 
 
-.body{
+body{
     background-image: url('../img/Login.png');
-};
+}
 
-.div{
-    background-color: red!important;
-};
+.div-principal{
+    background-color: #A8A7A7;
+    Height: 38rem;
+    border-radius: 150px;
+    margin-top: 5rem;
+    padding-top: 8rem;
+}
+.btn-inicio{
+    border-radius: 50px;
+    background-color: #5A993C;
+    border-color: black;
+    height: 3rem;
+}
+
