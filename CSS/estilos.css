@@ -62,3 +62,24 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.formulario{
+    background-color: #DBDBDB;
+    color: #5A993C;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3rem;
+    width: auto;
+    
+}
+.btn-confirmar{
+    bottom: 0;
+    position: fixed;
+}
+.div-confirmar{
+    display: flex;
+     justify-content: flex-end;
+     margin-right: 2%;
+    
+}
