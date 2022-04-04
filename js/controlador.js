@@ -229,7 +229,7 @@ function generarProductos(empresaSeleccionada, categoriaActual) {
                     <div class="text-center fs-6 fw-bold">Haz tu orden:</div>
                     <div class="mt-1 espacio-btns">
                         <button class="btn-fin-orden fs-6 fw-bold" type="button"><i class="fa-solid fa-cart-shopping"></i> <------ 1</button>
-                            <button class="btn-fin-orden fs-6 fw-bold" type="button">Finalizar Orden</button></a>
+                        <a href="confirmarDireccion.html"><button class="btn-fin-orden fs-6 fw-bold" type="button">Finalizar Orden</button></a>
                     </div>
                     <div class=" container">
                         <div class="row">`
