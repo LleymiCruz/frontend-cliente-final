@@ -134,7 +134,7 @@ var categorias=[
     
 ];
 function menu () {
-    document.getElementById('regresar').innerHTML=`<div><img class="m-1"src="img/Regresar.png" alt=""></div>
+    document.getElementById('regresar').innerHTML=`<a href="login.html"><div><img class="m-1"src="img/Regresar.png" alt=""></div></a>
     <img class="posicionLogo"src="img/planet express 1.png" alt="">`
     document.getElementById('div-secundario').innerHTML='';
     let stringHTML=`

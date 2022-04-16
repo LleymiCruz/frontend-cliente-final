@@ -39,11 +39,20 @@ font-weight: 400;
     margin-top: 5rem;
     padding-top: 8rem;
 }
+.prueba{
+    margin-left: auto;
+
+}
 .btn-inicio{
     border-radius: 50px;
     background-color: #5A993C;
     border-color: black;
     height: 3rem;
+}
+.btn-landingPage{
+    border-radius: 25px;
+    height: 2rem;
+    margin: 2px;
 }
 .div-secundario{
     position: absolute;
@@ -117,4 +126,11 @@ font-weight: 400;
 .estado-orden{
     height: 20px;
      border-radius: 8px;
+}
+.letras-landingPage{
+    color: #5A993C;
+    font-size: xx-large;
+    position: absolute;
+    margin-left: 6%;
+    
 }
