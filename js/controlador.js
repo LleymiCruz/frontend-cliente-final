@@ -153,8 +153,8 @@ function menu () {
     })
     stringHTML+=
                 ` <div class="col-2 col-lg-1 perfil-ordenes">
-                    <img src="img/Perfil.png" alt="">
-                    <img src="img/Ordenes.png" alt="">
+                    <a href="perfil.html"> <img src="img/Perfil.png" alt=""></a>
+                    <a href="ordenes.html"><img src="img/Ordenes.png" alt=""></a>
                 </div>
              </div>
         </div>`
