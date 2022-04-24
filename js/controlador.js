@@ -1,138 +1,30 @@
-
-var categorias=[
-    {
-        nombreCategoria:'Comida',
-        imagenCategoria:'img/Comida.png',
-        empresas:[
-            {
-                nombreEmpresa:'McDonalds',
-                baner:'img/Comida/McDonalds/BanerMcDonalds.png',
-                logo:'img/Comida/McDonalds/LogoMcDonalds.png',
-                calificacion:4,
-                productos:[
-                    {
-                        nombreProducto:'Duo Crispy',
-                        precio:129.00,
-                        imagenProducto:'img/Comida/McDonalds/Crispy.png',
-                    }
-
-                ]
-            },
-            {
-                nombreEmpresa:'Domino´s Pizza',
-                baner:'img/Comida/Dominos pizza/BanerDominos.png',
-                logo:'img/Comida/Dominos pizza/LogoDominos.png',
-                calificacion:5,
-                productos:[
-                    {
-                        nombreProducto:'Hawaiana',
-                        precio:129.00,
-                        imagenProducto:'img/Comida/Dominos pizza/Hawaiana.png',
-                    }
-
-                ]
+function login(){
+    $.ajax({
+        url:'../Backend/api/login.php',
+        method:'post',
+        data:JSON.stringify({
+            correo:document.getElementById('correo').value,
+            password:document.getElementById('password').value
+        }),
+        dataType:'json',
+        success:function(res){
+            if (res.codigoResultado==1) {
+                window.location.href="menuCategorias.html"
+                
+            }else{
+                document.getElementById('error').style.display='block';
+                document.getElementById('error').innerHTML=res.mensaje;
             }
+            console.log(res)
+        },
+        error:function (error) {
+            console.error(error);
+            
+        }
 
-        ]
+    });
 
-
-    },
-    {
-        nombreCategoria:'Útiles',
-        imagenCategoria:'img/Utiles.png',
-        empresas:[
-            {
-                nombreEmpresa:'',
-                baner:'',
-                logo:'',
-                calificacion:4,
-                productos:[
-                    {
-                        nombreProducto:'',
-                        precio:'',
-                        imagenProducto:'',
-                    }
-
-                ]
-            }
-
-        ]
-
-
-    },
-    {
-        nombreCategoria:'Farmacia',
-        imagenCategoria:'img/Farmacia.png',
-        empresas:[
-            {
-                nombreEmpresa:'',
-                baner:'',
-                logo:'',
-                calificacion:4,
-                productos:[
-                    {
-                        nombreProducto:'',
-                        precio:'',
-                        imagenProducto:'',
-                    }
-
-                ]
-            }
-
-        ]
-
-
-    },
-    {
-        nombreCategoria:'Supermercado',
-        imagenCategoria:'img/Supermercado.png',
-        empresas:[
-            {
-                nombreEmpresa:'',
-                baner:'',
-                logo:'',
-                calificacion:4,
-                productos:[
-                    {
-                        nombreProducto:'',
-                        precio:'',
-                        imagenProducto:'',
-                    }
-
-                ]
-            }
-
-        ]
-
-
-    },
-    {
-        nombreCategoria:'Paquete',
-        imagenCategoria:'img/Mandado-Paquete.png',
-        empresas:[
-            {
-                nombreEmpresa:'',
-                baner:'',
-                logo:'',
-                calificacion:4,
-                productos:[
-                    {
-                        nombreProducto:'',
-                        precio:'',
-                        imagenProducto:'',
-                    }
-
-                ]
-            }
-
-        ]
-
-
-    },
-   
-   
-    
-];
+}
 function menu () {
     document.getElementById('regresar').innerHTML=`<a href="login.html"><div><img class="m-1"src="img/Regresar.png" alt=""></div></a>
     <img class="posicionLogo"src="img/planet express 1.png" alt="">`
