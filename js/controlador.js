@@ -103,6 +103,11 @@ function menu () {
                 </div>`
         
             })
+            stringHTML+=
+            `<div id="paquete"class="col-6 categorias">
+            <a href="envioPaquete.html"><img src="img/Mandado-Paquete.png" alt="Paquete"></a>
+            <div class="col-12 mt-2 text-center fs-5 fw-bold">Paquete</div>
+            </div>`
                 stringHTML+=
                     ` <div class="col-2 col-lg-1 perfil-ordenes">
                         <a href="perfil.html"> <img src="img/Perfil.png" alt=""></a>
