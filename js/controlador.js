@@ -83,7 +83,7 @@ function menu () {
     document.getElementById('div-secundario').innerHTML='';
 
     let stringHTML=`
-        <div class="mt-2 text-center fs-1 fw-bold" >¡Hola Sherril!</div>
+        <div class="mt-2 text-center fs-1 fw-bold" >¡Hola!</div>
         <div class="mt-2 text-center fs-6 fw-bold" >¿Qué servicio necesitas hoy?</div>
         
         <div class="container-fluid" style="background-color:#A8A7A7" >
