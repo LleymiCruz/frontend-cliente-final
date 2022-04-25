@@ -25,6 +25,58 @@ function login(){
     });
 
 }
+function registrarCliente(){
+    let cantidadClientes=null;
+    let id=null;
+    $.ajax({
+        url:'../Backend/api/usuarios.php',
+        method:'get',
+        data:'',
+        dataType:'json',
+        success:function(res){
+            for (let i = 0; i < res.length; i++) {
+                 cantidadClientes+=1;
+                
+            }
+            id=cantidadClientes+1;
+            $.ajax({
+                url:'../Backend/api/usuarios.php',
+                method:'post',
+                data:JSON.stringify({
+                        idUsuario: id,
+                        nombreUsuario: document.getElementById('nombre').value,
+                        apellidoUsuario: document.getElementById('apellido').value,
+                        correo: document.getElementById('usuario').value,
+                        contrasena: document.getElementById('contrasena').value,
+                        ordenes: ''
+            
+                }),
+                dataType:'json',
+                success:function(res){
+                    if (res.codigoResultado==1) {
+                        
+                        window.location.href="credenciales.html"
+                       
+                    }
+                    
+                    console.log(res)
+                },
+                error:function (error) {
+                    console.error(error);
+                    
+                }
+        
+            });
+           
+        },
+        error:function (error) {
+            console.error(error);  
+        }
+    });
+
+   
+}
+
 function menu () {
     document.getElementById('regresar').innerHTML=`<a href="login.html"><div><img class="m-1"src="img/Regresar.png" alt=""></div></a>
     <img class="posicionLogo"src="img/planet express 1.png" alt="">`
